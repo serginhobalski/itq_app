@@ -1,0 +1,86 @@
+@extends('layouts.adm')
+
+@section('estyles')
+@endsection
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header text-white text-center bg-primary">
+                    <h3>{{ __('CADASTRAR CURSO') }}</h3>
+                </div>
+
+                <div class="card-body">
+                    <form method="POST" action="{{ route('cursos.store') }}" enctype="multipart/form-data">
+                        @csrf
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="nome">Nome</label>
+                                <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome do Curso">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="valor" class="">{{ __('Valor') }}</label>
+                                <input id="valor" type="text" class="form-control @error('valor') is-invalid @enderror" name="valor" value="{{ old('Valor') }}" required autocomplete="valor" placeholder="Valor do Curso (Apenas números!)">
+                                @error('valor')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="descricao">Descrição</label>
+                            <div class="summernote">
+                                <textarea id="descricao" name="descricao" class="form-control" placeholder="Descrição do Curso"> </textarea>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="imagem">Imagem do Curso</label>
+                            <input id="imagem" class="form-control"  type="file" name="imagem" id="imagem" value="{{ old('Imagem') }}" autocomplete="imagem" accept=".jpg, .jpeg, .png, .gif, .pdf" placeholder="Imagem do Curso">
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="valor" class="col-md-4 col-form-label text-md-end">{{ __('Categoria') }}</label>
+                                <select name="categoria" id="categoria" class="form-control">
+                                    <option value="itq">ITQ</option>
+                                    <option value="postulantes">Postulantes</option>
+                                    <option value="ministerial">Ministerial</option>
+                                    <option value="biblico">Bíblico</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ativo" class="col-md-4 col-form-label text-md-end">{{ __('Status') }}</label>
+                                <select name="ativo" id="ativo" class="form-control">
+                                    <option value="1">Ativo</option>
+                                    <option value="0">Inativo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-dark">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    {{ __('Cadastrar') }}
+                                </button>
+                                <a href="{{route('cursos.index')}}" class="btn btn-dark">
+                                    <i class="fa-solid fa-arrow-left"></i> Voltar
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+@section('scripts')
+@endsection
