@@ -59,7 +59,7 @@ class EventosSeeder extends Seeder
                 'title' => 'Divulgação dos resultados ENAQ 2023',
                 'description' => 'Divulgação das notas e resultados do ENAQ 2023',
                 'place' => 'Plataforma SEEC-PA',
-                'address' => 'https://seecpa.app',
+                'address' => 'https://enaq.seecpa.app',
                 'image' => 'storage/eventos/capa-postulantes.jpg',
                 'color' => '#f5a425;',
                 'start' => '2023-09-04 18:00:00',

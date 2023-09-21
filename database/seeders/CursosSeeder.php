@@ -18,7 +18,7 @@ class CursosSeeder extends Seeder
                 // ID: 1
                 'nome' => 'ITQ 1º Ano - Módulo 01',
                 'descricao' => 'Módulo 01 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 260.00,
+                'valor' => 280.00,
                 'ativo' => true,
                 'categoria' => 'itq',
                 'codigo' => 'A1M1',
@@ -27,7 +27,7 @@ class CursosSeeder extends Seeder
                 // ID: 2
                 'nome' => 'ITQ 1º Ano - Módulo 02',
                 'descricao' => 'Módulo 02 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A1M2',
@@ -36,7 +36,7 @@ class CursosSeeder extends Seeder
                 // ID: 3
                 'nome' => 'ITQ 1º Ano - Módulo 03',
                 'descricao' => 'Módulo 03 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A1M3',
@@ -45,7 +45,7 @@ class CursosSeeder extends Seeder
                 // ID: 4
                 'nome' => 'ITQ 1º Ano - Módulo 04',
                 'descricao' => 'Módulo 04 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A1M4',
@@ -54,7 +54,7 @@ class CursosSeeder extends Seeder
                 // ID: 5
                 'nome' => 'ITQ 1º Ano - Módulo 05',
                 'descricao' => 'Módulo 05 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A1M5',
@@ -63,7 +63,7 @@ class CursosSeeder extends Seeder
                 // ID: 6
                 'nome' => 'ITQ 1º Ano - Módulo 06',
                 'descricao' => 'Módulo 06 do 1º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A1M6',
@@ -72,7 +72,7 @@ class CursosSeeder extends Seeder
                 // ID: 7
                 'nome' => 'ITQ 2º Ano - Módulo 01',
                 'descricao' => 'Módulo 01 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 260.00, // 1
+                'valor' => 280.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M1',
@@ -81,7 +81,7 @@ class CursosSeeder extends Seeder
                 // ID: 8
                 'nome' => 'ITQ 2º Ano - Módulo 02',
                 'descricao' => 'Módulo 02 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M2',
@@ -90,7 +90,7 @@ class CursosSeeder extends Seeder
                 // ID: 9
                 'nome' => 'ITQ 2º Ano - Módulo 03',
                 'descricao' => 'Módulo 03 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M3',
@@ -99,7 +99,7 @@ class CursosSeeder extends Seeder
                 // ID: 10
                 'nome' => 'ITQ 2º Ano - Módulo 04',
                 'descricao' => 'Módulo 04 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M4',
@@ -108,7 +108,7 @@ class CursosSeeder extends Seeder
                 // ID: 11
                 'nome' => 'ITQ 2º Ano - Módulo 05',
                 'descricao' => 'Módulo 05 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M5',
@@ -117,7 +117,7 @@ class CursosSeeder extends Seeder
                 // ID: 12
                 'nome' => 'ITQ 2º Ano - Módulo 06',
                 'descricao' => 'Módulo 06 do 2º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A2M6',
@@ -126,7 +126,7 @@ class CursosSeeder extends Seeder
                 // ID: 13
                 'nome' => 'ITQ 3º Ano - Módulo 01',
                 'descricao' => 'Módulo 01 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 260.00, // 1
+                'valor' => 280.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M1',
@@ -135,7 +135,7 @@ class CursosSeeder extends Seeder
                 // ID: 14
                 'nome' => 'ITQ 3º Ano - Módulo 02',
                 'descricao' => 'Módulo 02 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M2',
@@ -144,7 +144,7 @@ class CursosSeeder extends Seeder
                 // ID: 15
                 'nome' => 'ITQ 3º Ano - Módulo 03',
                 'descricao' => 'Módulo 03 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M3',
@@ -153,7 +153,7 @@ class CursosSeeder extends Seeder
                 // ID: 16
                 'nome' => 'ITQ 3º Ano - Módulo 04',
                 'descricao' => 'Módulo 04 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M4',
@@ -162,7 +162,7 @@ class CursosSeeder extends Seeder
                 // ID: 17
                 'nome' => 'ITQ 3º Ano - Módulo 05',
                 'descricao' => 'Módulo 05 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M5',
@@ -171,7 +171,7 @@ class CursosSeeder extends Seeder
                 // ID: 18
                 'nome' => 'ITQ 3º Ano - Módulo 06',
                 'descricao' => 'Módulo 06 do 3º ano do Instituto Teológico Quadrangular EAD',
-                'valor' => 220.00, // 1
+                'valor' => 230.00, // 1
                 'ativo' => true, // 1
                 'categoria' => 'itq',
                 'codigo' => 'A3M6',

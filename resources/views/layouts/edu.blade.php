@@ -201,6 +201,8 @@
         </div><!-- end copy -->
     </div><!-- end wrapper -->
 
+    @yield('modal')
+
     <!-- jQuery Files -->
     {{-- <script src="{{asset('edu')}}/js/jquery.min.js"></script> --}}
     <script src="{{asset('src/')}}/assets/jquery.min.js"></script>
