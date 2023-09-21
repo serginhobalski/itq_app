@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Site Meta -->
     <title>ITQ EAD | {{$titulo}}</title>
+    @yield('calendar')
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -26,6 +27,12 @@
     <link rel="stylesheet" href="{{asset('edu')}}/css/carousel.css">
     <link rel="stylesheet" href="{{asset('edu')}}/css/animate.css">
     <link rel="stylesheet" href="{{asset('edu')}}/style.css">
+    <!-- FullCalendar -->
+    <script src="{{asset('src/')}}/assets/jquery.min.js"></script>
+    <script src="{{asset('fullcalendar-3.5.1')}}/lib/moment.min.js"></script>
+    <link rel="stylesheet" href="{{asset('fullcalendar-3.5.1')}}/fullcalendar.css" />
+    <script src="{{asset('fullcalendar-3.5.1')}}/fullcalendar.js"></script>
+    <script src="{{asset('fullcalendar-3.5.1')}}/locale-all.js"></script>
     @yield('styles')
 </head>
 
@@ -34,29 +41,10 @@
     <!-- LOADER -->
     <div id="preloader">
         <img class="preloader" src="{{asset('edu')}}/images/itqloader.gif" alt="">
-    </div><!-- end loader -->
+    </div>
     <!-- END LOADER -->
 
     <div id="wrapper">
-        <!-- BEGIN # MODAL LOGIN -->
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Begin # DIV Form -->
-                    <div id="div-forms">
-                        <form id="login-form">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span class="flaticon-add" aria-hidden="true"></span>
-                            </button>
-                            <div class="modal-body">
-                                <input class="form-control" type="text" placeholder="What you are looking for?" required>
-                            </div>
-                        </form><!-- End # Login Form -->
-                    </div><!-- End # DIV Form -->
-                </div>
-            </div>
-        </div>
-        <!-- END # MODAL LOGIN -->
 
         <header class="header">
 
@@ -76,7 +64,7 @@
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{{url('home')}}"><i class="fa-solid fa-house-user"></i></a></li>
+                            <li><a href="{{url('/')}}"><i class="fa-solid fa-house-user"></i></a></li>
                             <li class="dropdown hassubmenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     Meus Cursos <span class="fa fa-angle-down"></span></a>
@@ -103,7 +91,7 @@
                                     </li>
                                     @endif
                                     <li>
-                                        <a href="{{url('home')}}">
+                                        <a href="{{url('/')}}">
                                             <i class="fa-solid fa-chalkboard-user"></i> Painel
                                         </a>
                                     </li>
@@ -138,8 +126,8 @@
                             </li>
                         </ul>
                     </div>
-                </nav><!-- end navbar -->
-            </div><!-- end container -->
+                </nav>
+            </div>
         </header>
 
         @yield('content')
@@ -157,25 +145,25 @@
                                     <li><a href="{{url('notas')}}">Notas</a></li>
                                     <li><a href="{{url('perfil')}}">Perfil</a></li>
                                 </ul>
-                            </div><!-- end list-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="col-lg-4 col-md-4">
                         <div class="widget clearfix">
                             <h3 class="widget-title">Links</h3>
                             <div class="list-widget">
                                 <ul>
-                                    <li><a href="https://quadrangularpara.org/events/event/">IEQ Pará</a></li>
-                                    <li><a href="https://www.quadrangular.com.br/">IEQ Brasil</a></li>
-                                    <li><a href="https://www.sgecbrasil.com.br/">SGEC</a></li>
+                                    <li><a href="https://quadrangularpara.org/events/event/" target="_blank">IEQ Pará</a></li>
+                                    <li><a href="https://www.quadrangular.com.br/" target="_blank">IEQ Brasil</a></li>
+                                    <li><a href="https://www.sgecbrasil.com.br/" target="_blank">SGEC</a></li>
                                 </ul>
-                            </div><!-- end list-widget -->
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </footer><!-- end footer -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <div class="copyrights">
             <div class="container">
@@ -197,15 +185,13 @@
                         </div>
                     </div>
                 </div>
-            </div><!-- end container -->
-        </div><!-- end copy -->
-    </div><!-- end wrapper -->
+            </div>
+        </div>
+    </div>
 
     @yield('modal')
 
     <!-- jQuery Files -->
-    {{-- <script src="{{asset('edu')}}/js/jquery.min.js"></script> --}}
-    <script src="{{asset('src/')}}/assets/jquery.min.js"></script>
     <script src="{{asset('edu')}}/js/bootstrap.min.js"></script>
     <script src="{{asset('edu')}}/js/carousel.js"></script>
     <script src="{{asset('edu')}}/js/animate.js"></script>
@@ -214,36 +200,15 @@
     <script src="{{asset('edu')}}/js/videobg.js"></script>
     @yield('scripts')
     <script>
-        // Chamar a função quando carregar a página
-        // recuperarQtdUsuariosOnline();
-
-        // Recuperar a quantidade de usuário online
         async function recuperarQtdUsuariosOnline(){
-            // Chamar o arquivo PHP responsável em salvar o acesso do usuário e verificar a quantidade de usuários online
             const dados = await fetch('{{url("usuarios_online")}}');
-
-            // Ler os dados retornado do PHP
             const resposta = await dados.json();
             console.log(resposta);
-
-            // Enviar para o HTML a quantidade de usuários online
             document.getElementById("qtd-usuario-online").innerHTML = resposta['qtd_usuarios'];
-
-            // Enviar para o HTML o horário atual
-            // document.getElementById("hora-atual").innerHTML = resposta['data_atual'];
-            // console.log(resposta['data_atual']);
-
         }
-
-        // Executar a cada 120 segundos, para atualizar a quantidade de usuários online
         setInterval(() => {
-
-            // Chamar a função
             recuperarQtdUsuariosOnline();
-
-        //}, 120000); // Executar a cada 120 segundos
-        }, 5000); // Executar a cada 5 segundos
-        //}, 1000); // Executar a cada 1 segundo
+        }, 5000);
     </script>
 
 </body>

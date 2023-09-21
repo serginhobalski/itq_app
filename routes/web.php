@@ -15,6 +15,7 @@ use App\Http\Controllers\ItqController;
 use App\Http\Controllers\MensagemController;
 use App\Http\Controllers\NotaController;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use App\Mail\RecuperaMail;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,8 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/curso/{id}', [ItqController::class, 'curso']);
     Route::get('/disciplina/{id}', [ItqController::class, 'disciplina']);
     Route::get('/aula/{id}', [ItqController::class, 'aula']);
+    Route::get('/eventos', [SiteController::class, 'eventos']);
+    Route::get('/listar_eventos', [SiteController::class, 'listar_eventos']);
 });
 
 
